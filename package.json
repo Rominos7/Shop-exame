@@ -1,0 +1,19 @@
+{
+  "name": "node_js_server",
+  "version": "1.0.0",
+  "description": "inter-shop for exame",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rominos7/Shop-exame.git"
+  },
+  "author": "Roman_S.P.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rominos7/Shop-exame/issues"
+  },
+  "homepage": "https://github.com/Rominos7/Shop-exame#readme"
+}
