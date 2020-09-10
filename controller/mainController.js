@@ -1,5 +1,15 @@
+const Product = require('../models/product');
+
 exports.index = (req, res, next) => {
-    res.render("pages/index")
+    Product.fetchAll().then(([rows,fieldData]) =>{
+        res.render("pages/index",{
+            products:rows,
+            pageTitle: 'All products',
+            path:'/'
+        })
+    })
+    .catch(err => console.log(err));
+    
 }
 exports.faq = (req, res, next) => {
     res.render("pages/faq")
