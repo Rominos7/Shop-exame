@@ -1,11 +1,11 @@
-﻿<%- include('../layouts/header.ejs')  %>
-<%- include('../layouts/banner.ejs') %>
+﻿<%- include('../../layouts/header.ejs')  %>
+<%- include('../../layouts/banner.ejs') %>
 
 <div id="mainBody">
 	<div class="container">
 	<div class="row">
 	
-		<%- include('../layouts/sidebar.ejs')  %>
+		<%- include('../../layouts/sidebar.ejs')  %>
 
 		<div class="span9">		
 			<div class="well well-small">
@@ -199,7 +199,9 @@
 					  </p>
 					 
 					  <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#"><%= product.price%> UAH</a></h4>
-					</div> 
+					</div>
+					<button style=" cursor: pointer; margin-bottom: 15px; margin-left: 100px;"  class="btn"><a href='/admin/products_delete/<%= product.id%>'>Delete</a></button>
+					<button style=" cursor: pointer; margin-bottom: 15px; margin-left: 100px;"  class="btn"><a href='/admin/products_edit/<%= product.id%>'>Edit</a></button>  
 				  </div>
 				
                   
@@ -210,10 +212,13 @@
 					<ul><h2>No products found.</h2></ul>
 				<% } %>
                 
-			  </ul>				  
+			  </ul>	
+			 
+			  <button><a href ="/admin/add_product"></href>Add product</button>
+			  
 		</div>
 		</div>
 	</div>
 </div>
 
-<%- include('../layouts/footer.ejs') %>
+<%- include('../../layouts/footer.ejs') %>

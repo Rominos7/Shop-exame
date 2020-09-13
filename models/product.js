@@ -4,11 +4,14 @@ const sequelize = require('../helper/database');
 const Product = sequelize.define('product',{
     id:{
         type:Sequelize.INTEGER,
-        autoincrement : true,
-        allwoNull:false,
+        autoIncrement:true,
+        allowNull:false,
         primaryKey: true,
     },
-    title: Sequelize.STRING,
+    title:{
+        type:Sequelize.STRING,
+        allowNull:false,
+    },
     price:{
         type:Sequelize.DOUBLE,
         allowNull: false,

@@ -1,9 +1,10 @@
 const Product = require('../models/product');
 
 exports.index = (req, res, next) => {
-    Product.fetchAll().then(([rows,fieldData]) =>{
+    Product.findAll()
+    .then((product) =>{
         res.render("pages/index",{
-            products:rows,
+            products:product,
             pageTitle: 'All products',
             path:'/'
         })
