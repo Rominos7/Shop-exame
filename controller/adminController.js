@@ -83,6 +83,7 @@ exports.adminProductEdit= (req, res, next) => {
         res.render('pages/admin/edit_product',{
          product: product,
          id:id,
+         //path:'/products_edit/',
        })
    })
    .catch((err) => console.log(err));  

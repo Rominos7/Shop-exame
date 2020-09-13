@@ -199,9 +199,12 @@
 					  </p>
 					 
 					  <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#"><%= product.price%> UAH</a></h4>
+					
 					</div>
-					<button style=" cursor: pointer; margin-bottom: 15px; margin-left: 100px;"  class="btn"><a href='/admin/products_delete/<%= product.id%>'>Delete</a></button>
-					<button style=" cursor: pointer; margin-bottom: 15px; margin-left: 100px;"  class="btn"><a href='/admin/products_edit/<%= product.id%>'>Edit</a></button>  
+					<div style="width:100%;padding-left: 25%;">
+						<button style=" cursor: pointer; margin-bottom: 15px;"  class="btn"><a href='/admin/products_delete/<%= product.id%>'>Delete</a></button>
+					    <button style=" cursor: pointer; margin-bottom: 15px; margin-left: 5px;"  class="btn"><a href='/admin/products_edit/<%= product.id%>'>Edit</a></button> 
+					</div>
 				  </div>
 				
                   
