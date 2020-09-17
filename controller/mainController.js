@@ -1,6 +1,8 @@
 const Product = require('../models/product');
+const User = require('../models/users');
 
 exports.index = (req, res, next) => {
+    
     Product.findAll()
     .then((product) =>{
         res.render("pages/index",{
