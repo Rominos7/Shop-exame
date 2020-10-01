@@ -31,11 +31,11 @@ const Product = sequelize.define('product',{
     color: {
         type:Sequelize.STRING,
     },
-    descriptionShort:{
+    shortDescription:{
         type: Sequelize.STRING,
         allowNull: false,
     },
-    descriptionFull:{
+    fullDescription:{
          type: Sequelize.TEXT,
          allowNull:false,
     },
@@ -50,7 +50,7 @@ const Product = sequelize.define('product',{
     released:{
         type:Sequelize.DATE,
     },
-    dimentions:{
+    dimensions:{
         type:Sequelize.STRING,
     },
     displaySize:{

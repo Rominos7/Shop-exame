@@ -16,6 +16,9 @@ router.get("/products", mainController.products)
 router.get("/register", mainController.register)
 router.get("/special_offer", mainController.special_offer)
 router.get("/tac", mainController.tac)
+router.post('/cart',mainController.AddPostCart);
+router.get("/orders", mainController.getOrders);
+router.post("/make-order", mainController.postOrder);
 
 
 module.exports = router;

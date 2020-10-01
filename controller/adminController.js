@@ -1,4 +1,5 @@
 const Product = require('../models/product');
+const User = require('../models/users');
 //const { products } = require('./mainController');
 
 exports.adminIdex = (req, res, next) => {
@@ -30,15 +31,19 @@ exports.adminAddProductPost = (req,res,next) =>{
     const imageUrl = req.body.imageURL;
     const quantity = req.body.quantity;
     const color = req.body.color;
-    const descriptionShort = req.body.descriptionShort;
-    const descriptionFull = req.body.descriptionFull;
+    const shortDescription = req.body.descriptionShort;
+    const fullDescription = req.body.descriptionFull;
     const brand = req.body.brand;
     const model = req.body.model;
     const released = req.body.relased;
-    const dimentions = req.body.dimentions;
+    const dimensions = req.body.dimentions;
     const displaySize = req.body.displaySize;
     const features = req.body.features;
+    req.user;
+
+    //let UserId;
     
+  
 
     Product.create({
         title:title,
@@ -47,20 +52,25 @@ exports.adminAddProductPost = (req,res,next) =>{
         imageUrl:imageUrl,
         quantity:quantity,
         color:color,
-        descriptionShort:descriptionShort,
-        descriptionFull:descriptionFull,
+        shortDescription:shortDescription,
+        fullDescription:fullDescription,
         brand:brand,
         model:model,
         released:released,
-        dimentions:dimentions,
+        dimensions:dimensions,
         displaySize:displaySize,
         features:features,
+        userId:user[0].id,
+
     }).then(result =>{
         //console.log('add product result =>',result);
         console.log('product was added');
         res.redirect('/admin/');
     })
     .catch(err => console.log(err));
+
+
+
 }
 
 exports.adminProductDelete = (req,res,next) => {
